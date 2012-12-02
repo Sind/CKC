@@ -1,0 +1,23 @@
+powerbar = 50 yinyang
+
+width(every 25)
+height(30, 20, 10)
+
+player location: 30 x 135
+player size: 36 x 46
+
+
+jump obstacles: 16 x 25, 158 below top
+
+Jump: 135 to 105 y
+decrease: 30 over 100 pixels
+{
+	135-30*sin(100*PI/currentJump)
+}
+
+Enemy type:
+0 = null
+1 = yinyang
+2 = ground
+3 = projectile
+4 = Enemy
