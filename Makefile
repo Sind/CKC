@@ -3,8 +3,8 @@ BINNAME := output
 INPUTFILES := main.cpp Player.cpp Timer.cpp Enemy.cpp
 
 # Stuff we need
-INCLUDECFLAGS := -L/usr/lib `pkg-config --cflags sdl` -lSDL_image -lSDL_mixer
-INCLUDELIBFLAGS := -I"." -lmudflap -lm #-lreadline # -lm `pkg-config --libs sdl`
+INCLUDECFLAGS := -L/usr/lib `pkg-config --libs --cflags sdl` -lSDL_image -lSDL_mixer
+INCLUDELIBFLAGS := -I"." -lm #-lreadline # -lm `pkg-config --libs sdl`
 INCLUDEFLAGS := $(INCLUDECFLAGS) $(INCLUDELIBFLAGS)
 
 # Flags in common by all
